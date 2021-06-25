@@ -22,8 +22,8 @@ class Header extends React.Component {
             <nav>
                 <ul>
                     <button onClick={() => this.setState({ count: this.state.count + 1 })}>Accueil</button>
-                    <button onClick={() => this.setState({ count: this.state.count + 1 })}>About</button>
-                    <button onClick={() => this.setState({ count: this.state.count + 1 })}>Shop</button>
+                    <button onDoubleClick={() => this.setState({ count: this.state.count + 1 })}>About</button>
+                    <button onMouseOver={() => this.setState({ count: this.state.count + 1 })}>Shop</button>
                     <button onClick={() => this.setState({ count: this.state.count + 1 })}>Menu</button>
                 </ul>
             </nav>
