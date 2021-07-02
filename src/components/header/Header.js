@@ -2,33 +2,21 @@ import React from 'react'
 import './Nav.css'
 
 class Header extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            count: 0
-        }
+    myFunction(e){
+        console.log(e.target.innerText);
     }
-
-    componentDidMount() {
-        console.log(`Vous avez cliqué ${this.state.count} fois`);    }
-
-    componentDidUpdate() {
-        console.log(`Vous avez cliqué ${this.state.count} fois`);
-        
-    }
-
     render() {
-        return (
-            <nav>
-                <ul>
-                    <button onClick={() => this.setState({ count: this.state.count + 1 })}>Accueil</button>
-                    <button onDoubleClick={() => this.setState({ count: this.state.count + 1 })}>About</button>
-                    <button onMouseOver={() => this.setState({ count: this.state.count + 1 })}>Shop</button>
-                    <button onClick={() => this.setState({ count: this.state.count + 1 })}>Menu</button>
-                </ul>
-            </nav>
-        )
-    }
+    return (
+        <nav>
+            <ul>
+                <button onClick={this.myFunction}>Accueil</button>
+                <button onDoubleClick={this.myFunction}>About</button>
+                <button onMouseOver={this.myFunction}>Shop</button>
+                <button onClick={this.myFunction}>Menu</button>
+            </ul>
+        </nav>
+    )
+}
 }
 
 export default Header
